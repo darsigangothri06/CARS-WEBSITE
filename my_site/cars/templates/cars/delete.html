@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="display-2">Delete</h1>
+<div class="container">
+
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            <label for="pk">Enter Primary Key to Delete: </label>
+            <input type="number" name="pk" id="pk" class="form-control">
+            <br>
+            <input type="submit" value="Submit Details" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock content %}
